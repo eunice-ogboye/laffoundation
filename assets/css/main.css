@@ -1,16 +1,4 @@
-/**
-* Template Name: Dewi
-* Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -22,7 +10,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #273d4e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #ff4a17; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #ffb600; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -30,11 +18,11 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #e5eaee;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ff4a17; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #ffb600; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ff4a17; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #ffb600; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,7 +33,7 @@
 }
 
 .dark-background {
-  --background-color: #000910;
+  --background-color:  #001527;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #28323a;
@@ -237,8 +225,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 70px;
   margin-right: 8px;
+  border-radius: 10px;
 }
 
 .header .logo h1 {
@@ -252,6 +241,7 @@ h6 {
 .header .cta-btn:focus {
   color: var(--contrast-color);
   font-size: 13px;
+  font-weight: 700;
   padding: 7px 25px;
   margin: 0 0 0 30px;
   border-radius: 4px;
@@ -905,6 +895,12 @@ section,
   .section-title p {
     font-size: 24px;
   }
+  .header .logo img {
+    max-height: 60px;
+    margin-right: 8px;
+    border-radius: 10px;
+  }
+  
 }
 
 /*--------------------------------------------------------------
@@ -1843,4 +1839,25 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+.pages{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pages h2 {
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+@media (max-width:995px) {
+  .pages{
+    height: 30vh;
+    display: flex;
+  }
+  .pages h2 {
+    font-weight: 700;
+    font-size: 20px;
+  }
 }
