@@ -943,7 +943,7 @@ section,
   margin: 0;
   font-size: 48px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .hero p {
@@ -1839,6 +1839,35 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+.hero-btn {
+  
+  gap: 20px;
+ 
+}
+.hero-btn a:first-child {
+  font-weight: 700;
+  border-radius: 50px;
+}
+.hero-btn a:first-child:hover {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+   color: var(--accent-color);
+}
+.hero-btn a:last-child {
+  border-radius: 50px;
+ background: transparent;
+ border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 700;
+}
+.hero-btn a:last-child:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+.hero-p {
+  margin: auto;
+  text-align: center;
 }
 .pages{
   height: 60vh;
