@@ -17,7 +17,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #e5eaee;  /* The default color of the main navmenu links */
+  --nav-color: #444444;  /* The default color of the main navmenu links */
   --nav-hover-color: #ffb600; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -213,8 +213,8 @@ h6 {
   --background-color: rgba(0, 0, 0, 0);
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #000;
+  background-color: var(--default-color);
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -239,7 +239,7 @@ h6 {
 
 .header .cta-btn,
 .header .cta-btn:focus {
-  color: var(--contrast-color);
+  color: var(--accent-color);
   font-size: 13px;
   font-weight: 700;
   padding: 7px 25px;
@@ -247,7 +247,7 @@ h6 {
   border-radius: 4px;
   transition: 0.3s;
   text-transform: uppercase;
-  border: 2px solid var(--contrast-color);
+  border: 2px solid var(--accent-color);
 }
 
 .header .cta-btn:hover,
@@ -1014,6 +1014,21 @@ section,
 
 .about .fst-italic {
   color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+}
+.abt-btn {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.about .abt-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
 }
 
 .about .content ul {
@@ -1854,14 +1869,14 @@ section,
   border: 2px solid var(--accent-color);
    color: var(--accent-color);
 }
-.hero-btn a:last-child {
+.hero-btn a {
   border-radius: 50px;
  background: transparent;
  border: 2px solid var(--accent-color);
   color: var(--accent-color);
   font-weight: 700;
 }
-.hero-btn a:last-child:hover {
+.hero-btn a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
