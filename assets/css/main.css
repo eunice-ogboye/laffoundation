@@ -61,7 +61,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--accent-color));
   text-decoration: none;
 }
 
@@ -206,6 +206,14 @@ h6 {
   }
 }
 
+.projects .event-image{
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .event-image img{
+  width: 30%;
+  margin: 10px;
+}
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -1121,6 +1129,12 @@ section,
 
 .services .img img {
   transition: 0.6s;
+}
+.event-content{
+  margin-top: 15px;
+}
+.event-content h4{
+  font-weight: 600;
 }
 
 .services .details {
