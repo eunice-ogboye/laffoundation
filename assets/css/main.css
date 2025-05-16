@@ -212,6 +212,7 @@ h6 {
 }
 .projects .event-image img{
   width: 30%;
+  height: 30%;
   margin: 10px;
 }
 /*--------------------------------------------------------------
@@ -1133,8 +1134,9 @@ section,
 .event-content{
   margin-top: 15px;
 }
-.event-content h4{
-  font-weight: 600;
+.event-content .event-title{
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .services .details {
