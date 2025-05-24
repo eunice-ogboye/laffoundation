@@ -1,683 +1,1020 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Leke Aderinola Futures Foundation</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Leke Aderinola Futures Foundation</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <img src="assets/img/LAF logo.png " alt="" />
+          <!-- <h1 class="sitename">Leke Aderinola Futures Foundation</h1> -->
+        </a>
 
-</head>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
 
-<body class="index-page">
-
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/LAF logo.png " alt="">
-        <!-- <h1 class="sitename">Leke Aderinola Futures Foundation</h1> -->
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="cta-btn" href="donate.html">Donate</a>
-
-    </div>
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/DSC_0466.jpg" alt="" data-aos="fade-in">
-
-      <div class="container d-flex flex-column align-items-center">
-        <h2 data-aos="fade-up" data-aos-delay="100">Empowering the African Child – One Mind at a Time</h2>
-        <p data-aos="fade-up" data-aos-delay="200" class="hero-p"> "The light for everyone!" – Igniting potential through education, mentorship, and holistic development.</p>
-        <div class="hero-btn d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <!-- <a href="#about" class="btn-get-started">Donate Now</a> -->
-          <a href="#about" class="btn-get-started">Join Our Mission</a>
-        </div>
+        <a class="cta-btn" href="donate.html">Donate</a>
       </div>
+    </header>
 
-    </section><!-- /Hero Section -->
+    <main class="main">
+      <!-- Hero Section -->
+      <section id="hero" class="hero section dark-background">
+        <img src="assets/img/DSC_0466.jpg" alt="" data-aos="fade-in" />
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>About Us</h2>
-          <p>Who Are We?<br></p>
-        </div><!-- End Section Title -->
-  
-
-        <div class="row gy-4">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/img//DSC_0314.jpg" class="img-fluid rounded-4 mb-4" alt="">
-           
+        <div class="container d-flex flex-column align-items-center">
+          <h2 data-aos="fade-up" data-aos-delay="100">
+            Empowering the African Child – One Mind at a Time
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="200" class="hero-p">
+            "The light for everyone!" – Igniting potential through education,
+            mentorship, and holistic development.
+          </p>
+          <div
+            class="hero-btn d-flex mt-4"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <!-- <a href="#about" class="btn-get-started">Donate Now</a> -->
+            <a href="#about" class="btn-get-started">Join Our Mission</a>
           </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-            <div class="content ps-0 ps-lg-5">
-            <h3>Holistic empowerment of the African child.</h3>
-            <p>At LAFF, we believe that 'Enlightenment is Empowering.' Knowledge alone is not enough—it must be accessible, actionable, and transformative. Since our founding, we have worked tirelessly to illuminate minds, from street outreaches to school programs, proving that every child holds limitless potential.</p>
+        </div>
+      </section>
+      <!-- /Hero Section -->
 
-              <p class="fst-italic">
-                Our vission is to see the African child fully recognized and respected as royalty on a global scale.
-              </p>
-              <p>Our Core Values includes</p>
-              <ul>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Empowerment – Unlocking potential through education.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Equity – Ensuring every child has access to opportunities.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Community – Collaborative growth and support.</span></li>
-                <li><i class="bi bi-check-circle-fill"></i> <span>Innovation – Creative solutions for sustainable impact..</span></li>
-              </ul>
-              <div>
-                <a class="abt-btn" href="About.html">Learn More</a>
-              </div>
-              <!-- <p>
+      <!-- About Section -->
+      <section id="about" class="about section">
+        <div class="container">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>About Us</h2>
+            <p>Who Are We?<br /></p>
+          </div>
+          <!-- End Section Title -->
+
+          <div class="row gy-4">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="assets/img//DSC_0314.jpg"
+                class="img-fluid rounded-4 mb-4"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="content ps-0 ps-lg-5">
+                <h3>Holistic empowerment of the African child.</h3>
+                <p>
+                  At LAFF, we believe that 'Enlightenment is Empowering.'
+                  Knowledge alone is not enough—it must be accessible,
+                  actionable, and transformative. Since our founding, we have
+                  worked tirelessly to illuminate minds, from street outreaches
+                  to school programs, proving that every child holds limitless
+                  potential.
+                </p>
+
+                <p class="fst-italic">
+                  Our vission is to see the African child fully recognized and
+                  respected as royalty on a global scale.
+                </p>
+                <p>Our Core Values includes</p>
+                <ul>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Empowerment – Unlocking potential through
+                      education.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Equity – Ensuring every child has access to
+                      opportunities.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span>Community – Collaborative growth and support.</span>
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span
+                      >Innovation – Creative solutions for sustainable
+                      impact..</span
+                    >
+                  </li>
+                </ul>
+                <div>
+                  <a class="abt-btn" href="About.html">Learn More</a>
+                </div>
+                <!-- <p>
                 At LAFF, we believe that 'Enlightenment is Empowering.' Knowledge alone is not enough—it must be accessible, actionable, and transformative. Since our founding, we have worked tirelessly to illuminate minds, from street outreaches to school programs, proving that every child holds limitless potential.
               </p> -->
 
-              <!-- <div class="position-relative mt-4">
+                <!-- <div class="position-relative mt-4">
                 <img src="assets/img/DSC_0314.jpg" class="img-fluid rounded-4" alt="">
               </div> -->
+              </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- /About Section -->
 
-      </div>
+      <!-- Stats Section -->
+      <section id="stats" class="stats section light-background">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="1000"
+                    data-purecounter-duration="1"
+                    data-purecounter-separator=","
+                    class="purecounter"
+                  >
+                  </span>
+                  <span>+</span>
 
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
-              <div>
-                <span 
-  data-purecounter-start="0" 
-  data-purecounter-end="1000" 
-  data-purecounter-duration="1" 
-  data-purecounter-separator="," 
-  class="purecounter">
-</span>+
-                <p>students impacted annually</p>
+                  <p>students impacted annually</p>
+                </div>
               </div>
             </div>
-          </div><!-- End Stats Item -->
+            <!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="520" data-purecounter-duration="1" class="purecounter"></span>
-                <p>school reached annually</p>
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i
+                  class="bi bi-journal-richtext color-orange flex-shrink-0"
+                ></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="20"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <span>+</span>
+                  <p>school reached annually</p>
+                </div>
               </div>
             </div>
-          </div><!-- End Stats Item -->
+            <!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-headset color-green flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Events Held</p>
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="bi bi-headset color-green flex-shrink-0"></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="10"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <span>+</span>
+                  <p>Events Held</p>
+                </div>
               </div>
             </div>
-          </div><!-- End Stats Item -->
+            <!-- End Stats Item -->
 
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item d-flex align-items-center w-100 h-100">
-              <i class="bi bi-people color-pink flex-shrink-0"></i>
-              <div>
-                <span data-purecounter-start="0" data-purecounter-end="400" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Books Distributed</p>
+            <div class="col-lg-3 col-md-6">
+              <div class="stats-item d-flex align-items-center w-100 h-100">
+                <i class="bi bi-people color-pink flex-shrink-0"></i>
+                <div>
+                  <span
+                    data-purecounter-start="0"
+                    data-purecounter-end="400"
+                    data-purecounter-duration="1"
+                    class="purecounter"
+                  ></span>
+                  <span>+</span>
+                  <p>Books Distributed</p>
+                </div>
               </div>
             </div>
-          </div><!-- End Stats Item -->
-
+            <!-- End Stats Item -->
+          </div>
         </div>
+      </section>
+      <!-- /Stats Section -->
 
-      </div>
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Projects</h2>
+          <p>Checkout our various projects<br /></p>
+        </div>
+        <!-- End Section Title -->
 
-    </section><!-- /Stats Section -->
-
-    <!-- Services Section -->
-    <section id="services" class="services section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Projects</h2>
-        <p>Checkout our various projects<br></p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/DSC_0309.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-activity"></i>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-5">
+            <div
+              class="col-xl-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div class="service-item">
+                <div class="img">
+                  <img src="assets/img/DSC_0309.jpg" class="img-fluid" alt="" />
                 </div>
-                <a href="#" class="stretched-link">
-                  <h3>Education for All</h3>
-                </a>
-                <p>Breaking barriers to learning through scholarships, school supplies, and tutoring."</p>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-activity"></i>
+                  </div>
+                  <a href="#" class="stretched-link">
+                    <h3>Education for All</h3>
+                  </a>
+                  <p>
+                    Breaking barriers to learning through scholarships, school
+                    supplies, and tutoring."
+                  </p>
+                </div>
               </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/DSC_6257.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
+            <div
+              class="col-xl-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <div class="service-item">
+                <div class="img">
+                  <img src="assets/img/DSC_6257.jpg" class="img-fluid" alt="" />
                 </div>
-                <a href="#" class="stretched-link">
-                  <h3>Mentorship & Leadership</h3>
-                </a>
-                <p>Guiding the next generation of African leaders through workshops, career talks, and one-on-one mentorship."</p>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-broadcast"></i>
+                  </div>
+                  <a href="#" class="stretched-link">
+                    <h3>Mentorship & Leadership</h3>
+                  </a>
+                  <p>
+                    Guiding the next generation of African leaders through
+                    workshops, career talks, and one-on-one mentorship."
+                  </p>
+                </div>
               </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
-          <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="service-item">
-              <div class="img">
-                <img src="assets/img/DSC_6092.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="details position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
+            <div
+              class="col-xl-4 col-md-6"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              <div class="service-item">
+                <div class="img">
+                  <img src="assets/img/DSC_6092.jpg" class="img-fluid" alt="" />
                 </div>
-                <a href="#" class="stretched-link">
-                  <h3>Skills Development</h3>
-                </a>
-                <p>From coding to crafts, we prepare youths for the future with vocational and digital training.</p>
+                <div class="details position-relative">
+                  <div class="icon">
+                    <i class="bi bi-easel"></i>
+                  </div>
+                  <a href="#" class="stretched-link">
+                    <h3>Skills Development</h3>
+                  </a>
+                  <p>
+                    From coding to crafts, we prepare youths for the future with
+                    vocational and digital training.
+                  </p>
+                </div>
               </div>
             </div>
-          </div><!-- End Service Item -->
+            <!-- End Service Item -->
 
             <div class="text-center mt-5" data-aos="fade-up">
-      <a href="./projects.html" class="abt-btn">View All Our Projects</a>
-    </div>
-
-
-        </div>
-
-      </div>
-
-    </section><!-- /Services Section -->
-
-
-    <!-- Services 2 Section -->
-    <!-- Past Events Section -->
-<section id="past-events" class="past-events section light-background">
-
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Past Events</h2>
-    <p>Revealing Our <br> Memorable Moments</p>
-  </div><!-- End Section Title -->
-
-  <div class="container">
-
-    <div class="row gy-4 gx-4 stats">
-
-      <div class="col-md-6 stat-item" data-aos="fade-up" data-aos-delay="100">
-        <div class="event-card position-relative h-100">
-          <div class="event-image">
-            <img src="assets/img/ch6.jpg" class="img-fluid" alt="Community Outreach Event">
-          </div>
-          <div class="event-content">
-            <h4 class="event-title">Community Outreach Program</h4>
-            <div class="event-meta">
-              <span class="date"><i class="bi bi-calendar"></i> June 15, 2023</span>
-              <span class="location"><i class="bi bi-geo-alt"></i> Downtown Area</span>
-            </div>
-            <p class="event-description">Our team conducted street projects, health awareness campaigns, and advocated for child rights in underserved communities. Over 200 families received essential supplies and health checkups.</p>
-            <div class="event-stats">
-              <span><i class="bi bi-people"></i> 50 Volunteers</span>
-              <span><i class="bi bi-heart"></i> 200+ Beneficiaries</span>
+              <a href="./projects.html" class="abt-btn"
+                >View All Our Projects</a
+              >
             </div>
           </div>
         </div>
-      </div><!-- End Event Card -->
+      </section>
+      <!-- /Services Section -->
 
-      <div class="col-md-6 stat-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="event-card position-relative h-100">
-          <div class="event-image">
-            <img src="assets/img/DSC_6257.jpg" class="img-fluid" alt="Education Workshop">
+      <!-- Services 2 Section -->
+      <!-- Past Events Section -->
+      <section id="past-events" class="past-events section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Past Events</h2>
+          <p>
+            Revealing Our <br />
+            Memorable Moments
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row gy-4 gx-4 stats">
+            <div
+              class="col-md-6 stat-item"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="event-card position-relative h-100">
+                <div class="event-image">
+                  <img
+                    src="assets/img/ch6.jpg"
+                    class="img-fluid"
+                    alt="Community Outreach Event"
+                  />
+                </div>
+                <div class="event-content">
+                  <h4 class="event-title">Community Outreach Program</h4>
+                  <div class="event-meta">
+                    <span class="date"
+                      ><i class="bi bi-calendar"></i> June 15, 2023</span
+                    >
+                    <span class="location"
+                      ><i class="bi bi-geo-alt"></i> Downtown Area</span
+                    >
+                  </div>
+                  <p class="event-description">
+                    Our team conducted street projects, health awareness
+                    campaigns, and advocated for child rights in underserved
+                    communities. Over 200 families received essential supplies
+                    and health checkups.
+                  </p>
+                  <div class="event-stats">
+                    <span><i class="bi bi-people"></i> 50 Volunteers</span>
+                    <span><i class="bi bi-heart"></i> 200+ Beneficiaries</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Event Card -->
+
+            <div
+              class="col-md-6 stat-item"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="event-card position-relative h-100">
+                <div class="event-image">
+                  <img
+                    src="assets/img/DSC_6257.jpg"
+                    class="img-fluid"
+                    alt="Education Workshop"
+                  />
+                </div>
+                <div class="event-content">
+                  <h4 class="event-title">Youth Education Workshop</h4>
+                  <div class="event-meta">
+                    <span class="date"
+                      ><i class="bi bi-calendar"></i> April 22, 2023</span
+                    >
+                    <span class="location"
+                      ><i class="bi bi-geo-alt"></i> Community Center</span
+                    >
+                  </div>
+                  <p class="event-description">
+                    A full-day workshop focused on digital literacy and career
+                    guidance for underprivileged youth. Participants received
+                    hands-on training and mentorship from industry
+                    professionals.
+                  </p>
+                  <div class="event-stats">
+                    <span><i class="bi bi-people"></i> 35 Volunteers</span>
+                    <span><i class="bi bi-person-check"></i> 120 Students</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Event Card -->
+
+            <div
+              class="col-md-6 stat-item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="event-card position-relative h-100">
+                <div class="event-image">
+                  <img
+                    src="assets/img/DSC_6092.jpg"
+                    class="img-fluid"
+                    alt="Tree Planting"
+                  />
+                </div>
+                <div class="event-content">
+                  <h4 class="event-title">Green Earth Initiative</h4>
+                  <div class="event-meta">
+                    <span class="date"
+                      ><i class="bi bi-calendar"></i> March 5, 2023</span
+                    >
+                    <span class="location"
+                      ><i class="bi bi-geo-alt"></i> Riverside Park</span
+                    >
+                  </div>
+                  <p class="event-description">
+                    Community tree planting day with educational sessions on
+                    environmental conservation. We planted over 300 native trees
+                    and educated participants on sustainable practices.
+                  </p>
+                  <div class="event-stats">
+                    <span><i class="bi bi-people"></i> 80 Volunteers</span>
+                    <span><i class="bi bi-tree"></i> 300+ Trees Planted</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Event Card -->
+
+            <div
+              class="col-md-6 stat-item"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="event-card position-relative h-100">
+                <div class="event-image">
+                  <img
+                    src="assets/img/DSC_0466.jpg"
+                    class="img-fluid"
+                    alt="Health Camp"
+                  />
+                </div>
+                <div class="event-content">
+                  <h4 class="event-title">
+                    Visit to orphanage homes in Ibadan
+                  </h4>
+                  <div class="event-meta">
+                    <span class="date"
+                      ><i class="bi bi-calendar"></i> February 2024</span
+                    >
+                    <span class="location"
+                      ><i class="bi bi-geo-alt"></i> Ibadan</span
+                    >
+                  </div>
+                  <p class="event-description">
+                    In 2024, we organized an Outreach to two orphanage homes in
+                    Ibadan, Nigeria.
+                    <br />
+                    We provided food, clothing, and educational materials to the
+                    children. We also engaged them in fun activities and games
+                    to uplift their spirits.
+                    <br />
+                    These are images of those children we reached out to whose
+                    lives were impacted through our Outreach. Together, we’re
+                    creating brighter futures!.
+                  </p>
+                  <div class="event-stats">
+                    <span><i class="bi bi-people"></i> 50 Volunteers</span>
+                    <span><i class="bi bi-heart"></i> 200+ Beneficiaries</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Event Card -->
           </div>
-          <div class="event-content">
-            <h4 class="event-title">Youth Education Workshop</h4>
-            <div class="event-meta">
-              <span class="date"><i class="bi bi-calendar"></i> April 22, 2023</span>
-              <span class="location"><i class="bi bi-geo-alt"></i> Community Center</span>
-            </div>
-            <p class="event-description">A full-day workshop focused on digital literacy and career guidance for underprivileged youth. Participants received hands-on training and mentorship from industry professionals.</p>
-            <div class="event-stats">
-              <span><i class="bi bi-people"></i> 35 Volunteers</span>
-              <span><i class="bi bi-person-check"></i> 120 Students</span>
-            </div>
+
+          <div class="text-center mt-5" data-aos="fade-up">
+            <a href="./Event.html" class="abt-btn">View All Past Events</a>
           </div>
         </div>
-      </div><!-- End Event Card -->
+      </section>
+      <!-- /Past Events Section -->
 
-      <div class="col-md-6 stat-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="event-card position-relative h-100">
-          <div class="event-image">
-            <img src="assets/img/DSC_6092.jpg" class="img-fluid" alt="Tree Planting">
-          </div>
-          <div class="event-content">
-            <h4 class="event-title">Green Earth Initiative</h4>
-            <div class="event-meta">
-              <span class="date"><i class="bi bi-calendar"></i> March 5, 2023</span>
-              <span class="location"><i class="bi bi-geo-alt"></i> Riverside Park</span>
-            </div>
-            <p class="event-description">Community tree planting day with educational sessions on environmental conservation. We planted over 300 native trees and educated participants on sustainable practices.</p>
-            <div class="event-stats">
-              <span><i class="bi bi-people"></i> 80 Volunteers</span>
-              <span><i class="bi bi-tree"></i> 300+ Trees Planted</span>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Event Card -->
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="testimonials section dark-background">
+        <img
+          src="assets/img/testimonials-bg.jpg"
+          class="testimonials-bg"
+          alt=""
+        />
 
-      <div class="col-md-6 stat-item" data-aos="fade-up" data-aos-delay="400">
-        <div class="event-card position-relative h-100">
-          <div class="event-image">
-            <img src="assets/img/DSC_0466.jpg" class="img-fluid" alt="Health Camp">
-          </div>
-          <div class="event-content">
-            <h4 class="event-title">Free Health Camp</h4>
-            <div class="event-meta">
-              <span class="date"><i class="bi bi-calendar"></i> February 18, 2023</span>
-              <span class="location"><i class="bi bi-geo-alt"></i> Urban Slum Area</span>
-            </div>
-            <p class="event-description">A comprehensive health camp providing free medical checkups, basic treatments, and medicines to low-income families. Partnered with local doctors and pharmacies.</p>
-            <div class="event-stats">
-              <span><i class="bi bi-people"></i> 15 Medical Professionals</span>
-              <span><i class="bi bi-heart-pulse"></i> 350+ Patients Served</span>
-            </div>
-          </div>
-        </div>
-      </div><!-- End Event Card -->
-
-    </div>
-
-    <div class="text-center mt-5" data-aos="fade-up">
-      <a href="./Event.html" class="abt-btn">View All Past Events</a>
-    </div>
-
-  </div>
-
-</section><!-- /Past Events Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section dark-background">
-
-      <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                }
               }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
-                <h3>Ademide</h3>
-                <h4>14years old student</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </script>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <!-- <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt=""> -->
+                  <h3>Ademide</h3>
+                  <h4>14years old student</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Before I met LAFF, I struggled with confidence and access
+                      to learning resources. But through their mentorship
+                      program and school outreaches, I’ve discovered my voice
+                      and passion for science. Now, I dream of becoming an
+                      engineer—and I believe it’s possible. LAFF truly changed
+                      my life!</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Before I met LAFF, I struggled with confidence and access to learning resources. But through their mentorship program and school outreaches, I’ve discovered my voice and passion for science. Now, I dream of becoming an engineer—and I believe it’s possible. LAFF truly changed my life!</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
-            </div><!-- End testimonial item -->
+              <!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
-                <h3>Mrs. Okonkwo</h3>
-                <h4>Secondary School Teacher</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <!-- <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt=""> -->
+                  <h3>Mrs. Okonkwo</h3>
+                  <h4>Secondary School Teacher</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >I’ve worked in underserved schools for over a decade, and
+                      it’s rare to see an organization so committed to real
+                      change. LAFF doesn’t just give—it uplifts. Their workshops
+                      and materials have transformed the way our students see
+                      themselves and their future.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>I’ve worked in underserved schools for over a decade, and it’s rare to see an organization so committed to real change. LAFF doesn’t just give—it uplifts. Their workshops and materials have transformed the way our students see themselves and their future.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
-            </div><!-- End testimonial item -->
+              <!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
-                  <h3> Mrs. Adebayo</h3>
-                <h4>Parent</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <!-- <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt=""> -->
+                  <h3>Mrs. Adebayo</h3>
+                  <h4>Parent</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >My son came home after a LAFF outreach and said, ‘Mummy,
+                      I can do great things too.’ That moment brought tears to
+                      my eyes. Thank you, LAFF, for planting bold dreams in the
+                      hearts of our children and reminding them they
+                      matter.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>My son came home after a LAFF outreach and said, ‘Mummy, I can do great things too.’ That moment brought tears to my eyes. Thank you, LAFF, for planting bold dreams in the hearts of our children and reminding them they matter.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
-            </div><!-- End testimonial item -->
+              <!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
-                <h3>  David O</h3>
-                <h4> Volunteer Mentor</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <!-- <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt=""> -->
+                  <h3>David O</h3>
+                  <h4>Volunteer Mentor</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    <span
+                      >Volunteering with LAFF has been one of the most
+                      fulfilling experiences of my life. Seeing the joy on
+                      children’s faces as they learn and grow is priceless. LAFF
+                      isn’t just an organization—it’s a movement of hope, light,
+                      and transformation.</span
+                    >
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
                 </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Volunteering with LAFF has been one of the most fulfilling experiences of my life. Seeing the joy on children’s faces as they learn and grow is priceless. LAFF isn’t just an organization—it’s a movement of hope, light, and transformation.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
               </div>
-            </div><!-- End testimonial item -->
-
+              <!-- End testimonial item -->
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
+      </section>
+      <!-- /Testimonials Section -->
 
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-  
-
-    <!-- Team Section -->
-    <section id="team" class="team section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Team</h2>
-        <p>Meet Our Volunteers</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/DSC_0482.jpg" class="img-fluid" alt="" width="100%"></div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/DSC_0480.jpg" class="img-fluid" alt="" width="100%"></div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="pic"><img src="assets/img/team/DSC_0475.jpg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
+      <!-- Team Section -->
+      <section id="team" class="team section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>Meet Our Volunteers</p>
         </div>
+        <!-- End Section Title -->
 
-      </div>
-
-    </section><!-- /Team Section -->
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Get In Touch With Us</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-6 ">
-            <div class="row gy-4">
-
-              <div class="col-lg-12">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Address</h3>
-                  <p>Lagos Nigeria</p>
+        <div class="container">
+          <div class="row gy-5">
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team2.jpg"
+                    class="img-fluid"
+                    alt=""
+                    width="100%"
+                  />
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-telephone"></i>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                <div class="member-info">
+                  <h4>Leke Aderinola</h4>
+                  <p>Founder and Director</p>
                 </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-                  <i class="bi bi-envelope"></i>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
+              </div>
             </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team3.jpg"
+                    class="img-fluid"
+                    alt=""
+                    width="100%"
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Tayo Olutimehin</h4>
+                  <p>Head of Operations</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
+
+            <div
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="member">
+                <div class="pic">
+                  <img
+                    src="assets/img/team/team1.jpg"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="member-info">
+                  <h4>Adedamola Aderinola</h4>
+                  <p>Head of Media</p>
+                </div>
+              </div>
+            </div>
+            <!-- End Team Member -->
           </div>
+        </div>
+      </section>
+      <!-- /Team Section -->
 
-          <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
+      <!-- Contact Section -->
+      <section id="contact" class="contact section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Get In Touch With Us</p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-6">
               <div class="row gy-4">
+                <div class="col-lg-12">
+                  <div
+                    class="info-item d-flex flex-column justify-content-center align-items-center"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Address</h3>
+                    <p>Lagos, Nigeria</p>
+                  </div>
+                </div>
+                <!-- End Info Item -->
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <div
+                    class="info-item d-flex flex-column justify-content-center align-items-center"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <i class="bi bi-telephone"></i>
+                    <h3>Call Us</h3>
+                    <p>+1 5589 55488 55</p>
+                  </div>
                 </div>
+                <!-- End Info Item -->
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <div
+                    class="info-item d-flex flex-column justify-content-center align-items-center"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                  >
+                    <i class="bi bi-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>info@example.com</p>
+                  </div>
                 </div>
+                <!-- End Info Item -->
+              </div>
+            </div>
 
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            <div class="col-lg-6">
+              <form
+                action="forms/contact.php"
+                method="post"
+                class="php-email-form"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                      required=""
+                    />
+                  </div>
+
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="4"
+                      placeholder="Message"
+                      required=""
+                    ></textarea>
+                  </div>
+
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                  </div>
                 </div>
+              </form>
+            </div>
+            <!-- End Contact Form -->
+          </div>
+        </div>
+      </section>
+      <!-- /Contact Section -->
+    </main>
 
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="4" placeholder="Message" required=""></textarea>
-                </div>
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Leke Aderinola Futures Foundation</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>Lagos Nigeria.</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
+              <a href="https://www.facebook.com/share/1EZP6R2fzQ/"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/lafuturesfoundation?igsh=Mm41NTl0NW4zZHVh"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/company/leke-aderinola-futures-foundation/"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </div>
+          </div>
 
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="About.html">About us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="projects.html">Projects</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="contact.html">Contact Us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="donate.html">donate-now</a>
+              </li>
+            </ul>
+          </div>
 
-                  <button type="submit">Send Message</button>
-                </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="projects.html">Education for All</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#">Mentorship & Leadership</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#">Skills Development</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#">Students Empowerment</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right"></i>
+                <a href="#">Street Feeding</a>
+              </li>
+            </ul>
+          </div>
 
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              foundation!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-  </main>
-
-  <footer id="footer" class="footer dark-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Leke Aderinola Futures Foundation</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>Lagos Nigeria.</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
-          </div>
-          <div class="social-links d-flex mt-4">
-            <!-- <a href=""><i class="bi bi-twitter-x"></i></a> -->
-            <a href="https://www.facebook.com/share/1EZP6R2fzQ/"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/lafuturesfoundation?igsh=Mm41NTl0NW4zZHVh"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/leke-aderinola-futures-foundation/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="About.html">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="projects.html">Projects</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="contact.html">Contact Us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="donate.html">donate-now</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="projects.html">Education for All</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Mentorship & Leadership</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Skills Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Students Empowerment</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Street Feeding</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our foundation!</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
       </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Leke Aderinola Futures Foundation</strong> <span>All Rights Reserved</span></p>
-      <!-- <div class="credits">
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename"
+            >Leke Aderinola Futures Foundation</strong
+          >
+          <span>All Rights Reserved</span>
+        </p>
+        <!-- <div class="credits">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div> -->
-    </div>
+      </div>
+    </footer>
 
-  </footer>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
