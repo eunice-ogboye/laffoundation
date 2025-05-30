@@ -861,6 +861,9 @@ section,
     scroll-margin-top: 76px;
   }
 }
+.backg{
+  background-color: var(--background-color);
+}
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -963,7 +966,9 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+   margin-top: 1rem;
 }
+
 
 .hero h2 {
   margin: 0;
@@ -1002,7 +1007,16 @@ section,
   font-weight: 400;
   color: var(--default-color);
 }
-
+@media (max-width: 768px) {
+  .hero .container {
+  margin-top: 3rem;
+  text-align: center;
+}
+.hero h2 {
+  margin: 0;
+  font-size: 28px;
+}
+}
 .hero .btn-watch-video i {
   color: var(--accent-color);
   font-size: 32px;
