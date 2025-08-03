@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAFF Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .nav-link {
+            color: rgba(255,255,255,0.8);
+            border-radius: 8px;
+            margin: 4px 0;
+            transition: all 0.3s;
+        }
+        .nav-link:hover, .nav-link.active {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+        .card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 12px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+        }
+        .preview-img {
+            max-width: 100px;
+            max-height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #ff9a56 0%, #f093fb 100%);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar p-3">
+                <div class="text-center mb-4">
+                    <h4 class="text-white">LAFF Admin</h4>
+                    <small class="text-white-50">Dashboard Panel</small>
+                </div>
+                
+                <nav class="nav flex-column">
+                    <a class="nav-link active" href="#" data-section="dashboard">
+                        <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                    </a>
+                    <a class="nav-link" href="#" data-section="volunteers">
+                        <i class="bi bi-people me-2"></i> Volunteers
+                    </a>
+                    <a class="nav-link" href="#" data-section="events">
+                        <i class="bi bi-calendar-event me-2"></i> Events
+                    </a>
+                    <a class="nav-link" href="#" data-section="settings">
+                        <i class="bi bi-gear me-2"></i> Settings
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 p-4">
+                <!-- Dashboard Section -->
+                <div id="dashboard" class="content-section active">
+                    <h2 class="mb-4">Dashboard Overview</h2>
+                    <div class="row mb-4">
+                        <div class="col-md-3">
+                            <div class="card stats-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-people fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0" id="volunteer-count">0</h5>
+                                        <small>Total Volunteers</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stats-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-calendar-event fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0" id="event-count">0</h5>
+                                        <small>Total Events</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stats-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-emoji-smile fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">1000+</h5>
+                                        <small>Students Impacted</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card stats-card p-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-building fs-2 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-0">20+</h5>
+                                        <small>Schools Reached</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="card p-4">
+                                <h5>Recent Activity</h5>
+                                <div id="recent-activity">
+                                    <p class="text-muted">No recent activity</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card p-4">
+                                <h5>Quick Actions</h5>
+                                <button class="btn btn-primary btn-sm mb-2 w-100" onclick="showSection('volunteers')">
+                                    <i class="bi bi-person-plus me-2"></i>Add Volunteer
+                                </button>
+                                <button class="btn btn-primary btn-sm w-100" onclick="showSection('events')">
+                                    <i class="bi bi-calendar-plus me-2"></i>Add Event
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteers Section -->
+                <div id="volunteers" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Manage Volunteers</h2>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#volunteerModal">
+                            <i class="bi bi-person-plus me-2"></i>Add New Volunteer
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Photo</th>
+                                            <th>Name</th>
+                                            <th>Position</th>
+                                            <th>Date Added</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="volunteers-table-body">
+                                        <!-- Volunteers will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Section -->
+                <div id="events" class="content-section">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Manage Events</h2>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eventModal">
+                            <i class="bi bi-calendar-plus me-2"></i>Add New Event
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Date</th>
+                                            <th>Location</th>
+                                            <th>Volunteers</th>
+                                            <th>Beneficiaries</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="events-table-body">
+                                        <!-- Events will be loaded here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div id="settings" class="content-section">
+                    <h2 class="mb-4">Settings</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card p-4">
+                                <h5>Export Data</h5>
+                                <p class="text-muted">Download your data for backup</p>
+                                <button class="btn btn-outline-primary me-2" onclick="exportData('volunteers')">
+                                    Export Volunteers
+                                </button>
+                                <button class="btn btn-outline-primary" onclick="exportData('events')">
+                                    Export Events
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-4">
+                                <h5>Clear Data</h5>
+                                <p class="text-muted text-danger">Warning: This action cannot be undone</p>
+                                <button class="btn btn-outline-danger me-2" onclick="clearData('volunteers')">
+                                    Clear Volunteers
+                                </button>
+                                <button class="btn btn-outline-danger" onclick="clearData('events')">
+                                    Clear Events
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Modal -->
+    <div class="modal fade" id="volunteerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Volunteer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="volunteerForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="volunteerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Position/Role</label>
+                            <input type="text" class="form-control" id="volunteerPosition" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Photo</label>
+                            <input type="file" class="form-control" id="volunteerPhoto" accept="image/*">
+                            <div class="mt-2">
+                                <img id="volunteerPhotoPreview" class="preview-img" style="display:none;">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Bio (Optional)</label>
+                            <textarea class="form-control" id="volunteerBio" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveVolunteer()">Save Volunteer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div class="modal fade" id="eventModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Event</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="eventForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Event Title</label>
+                                    <input type="text" class="form-control" id="eventTitle" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Event Date</label>
+                                    <input type="date" class="form-control" id="eventDate" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Location</label>
+                                    <input type="text" class="form-control" id="eventLocation" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Event Image</label>
+                                    <input type="file" class="form-control" id="eventImage" accept="image/*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <img id="eventImagePreview" class="preview-img" style="display:none;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Event Description</label>
+                            <textarea class="form-control" id="eventDescription" rows="4" required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Number of Volunteers</label>
+                                    <input type="number" class="form-control" id="eventVolunteers" min="1">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Number of Beneficiaries</label>
+                                    <input type="number" class="form-control" id="eventBeneficiaries" min="1">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="saveEvent()">Save Event</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Data storage using localStorage (for demo purposes)
+        let volunteers = JSON.parse(localStorage.getItem('laff_volunteers') || '[]');
+        let events = JSON.parse(localStorage.getItem('laff_events') || '[]');
+
+        // Initialize dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            loadDashboard();
+            loadVolunteers();
+            loadEvents();
+            setupImagePreviews();
+            setupNavigation();
+        });
+
+        function setupNavigation() {
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                    
+                    // Update active nav
+                    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        }
+
+        function showSection(sectionName) {
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionName).classList.add('active');
+        }
+
+        function setupImagePreviews() {
+            document.getElementById('volunteerPhoto').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById('volunteerPhotoPreview');
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            document.getElementById('eventImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const preview = document.getElementById('eventImagePreview');
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+
+        function loadDashboard() {
+            document.getElementById('volunteer-count').textContent = volunteers.length;
+            document.getElementById('event-count').textContent = events.length;
+            
+            // Load recent activity
+            const recentActivity = document.getElementById('recent-activity');
+            const activities = [];
+            
+            // Add recent volunteers
+            volunteers.slice(-3).forEach(volunteer => {
+                activities.push(`Volunteer "${volunteer.name}" was added`);
+            });
+            
+            // Add recent events
+            events.slice(-3).forEach(event => {
+                activities.push(`Event "${event.title}" was added`);
+            });
+            
+            if (activities.length > 0) {
+                recentActivity.innerHTML = activities.map(activity => 
+                    `<div class="border-bottom pb-2 mb-2"><small class="text-muted">${activity}</small></div>`
+                ).join('');
+            }
+        }
+
+        function saveVolunteer() {
+            const name = document.getElementById('volunteerName').value;
+            const position = document.getElementById('volunteerPosition').value;
+            const bio = document.getElementById('volunteerBio').value;
+            const photoFile = document.getElementById('volunteerPhoto').files[0];
+
+            if (!name || !position) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const volunteer = {
+                id: Date.now(),
+                name: name,
+                position: position,
+                bio: bio,
+                dateAdded: new Date().toLocaleDateString(),
+                photo: null
+            };
+
+            if (photoFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    volunteer.photo = e.target.result;
+                    volunteers.push(volunteer);
+                    localStorage.setItem('laff_volunteers', JSON.stringify(volunteers));
+                    loadVolunteers();
+                    loadDashboard();
+                    resetVolunteerForm();
+                    bootstrap.Modal.getInstance(document.getElementById('volunteerModal')).hide();
+                };
+                reader.readAsDataURL(photoFile);
+            } else {
+                volunteers.push(volunteer);
+                localStorage.setItem('laff_volunteers', JSON.stringify(volunteers));
+                loadVolunteers();
+                loadDashboard();
+                resetVolunteerForm();
+                bootstrap.Modal.getInstance(document.getElementById('volunteerModal')).hide();
+            }
+        }
+
+        function saveEvent() {
+            const title = document.getElementById('eventTitle').value;
+            const date = document.getElementById('eventDate').value;
+            const location = document.getElementById('eventLocation').value;
+            const description = document.getElementById('eventDescription').value;
+            const volunteersCount = document.getElementById('eventVolunteers').value;
+            const beneficiariesCount = document.getElementById('eventBeneficiaries').value;
+            const imageFile = document.getElementById('eventImage').files[0];
+
+            if (!title || !date || !location || !description) {
+                alert('Please fill in all required fields');
+                return;
+            }
+
+            const event = {
+                id: Date.now(),
+                title: title,
+                date: date,
+                location: location,
+                description: description,
+                volunteers: volunteersCount || 0,
+                beneficiaries: beneficiariesCount || 0,
+                dateAdded: new Date().toLocaleDateString(),
+                image: null
+            };
+
+            if (imageFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    event.image = e.target.result;
+                    events.push(event);
+                    localStorage.setItem('laff_events', JSON.stringify(events));
+                    loadEvents();
+                    loadDashboard();
+                    resetEventForm();
+                    bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide();
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                events.push(event);
+                localStorage.setItem('laff_events', JSON.stringify(events));
+                loadEvents();
+                loadDashboard();
+                resetEventForm();
+                bootstrap.Modal.getInstance(document.getElementById('eventModal')).hide();
+            }
+        }
+
+        function loadVolunteers() {
+            const tbody = document.getElementById('volunteers-table-body');
+            tbody.innerHTML = '';
+
+            volunteers.forEach(volunteer => {
+                const row = `
+                    <tr>
+                        <td>
+                            ${volunteer.photo ? 
+                                `<img src="${volunteer.photo}" class="preview-img" alt="${volunteer.name}">` : 
+                                '<div class="bg-secondary rounded" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;color:white;"><i class="bi bi-person"></i></div>'
+                            }
+                        </td>
+                        <td>${volunteer.name}</td>
+                        <td>${volunteer.position}</td>
+                        <td>${volunteer.dateAdded}</td>
+                        <td>
+                            <button class="btn btn-sm btn-danger" onclick="deleteVolunteer(${volunteer.id})">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        function loadEvents() {
+            const tbody = document.getElementById('events-table-body');
+            tbody.innerHTML = '';
+
+            events.forEach(event => {
+                const row = `
+                    <tr>
+                        <td>
+                            ${event.image ? 
+                                `<img src="${event.image}" class="preview-img" alt="${event.title}">` : 
+                                '<div class="bg-secondary rounded" style="width:50px;height:50px;display:flex;align-items:center;justify-content:center;color:white;"><i class="bi bi-calendar-event"></i></div>'
+                            }
+                        </td>
+                        <td>${event.title}</td>
+                        <td>${new Date(event.date).toLocaleDateString()}</td>
+                        <td>${event.location}</td>
+                        <td>${event.volunteers} volunteers</td>
+                        <td>${event.beneficiaries} beneficiaries</td>
+                        <td>
+                            <button class="btn btn-sm btn-danger" onclick="deleteEvent(${event.id})">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        function deleteVolunteer(id) {
+            if (confirm('Are you sure you want to delete this volunteer?')) {
+                volunteers = volunteers.filter(v => v.id !== id);
+                localStorage.setItem('laff_volunteers', JSON.stringify(volunteers));
+                loadVolunteers();
+                loadDashboard();
+            }
+        }
+
+        function deleteEvent(id) {
+            if (confirm('Are you sure you want to delete this event?')) {
+                events = events.filter(e => e.id !== id);
+                localStorage.setItem('laff_events', JSON.stringify(events));
+                loadEvents();
+                loadDashboard();
+            }
+        }
+
+        function resetVolunteerForm() {
+            document.getElementById('volunteerForm').reset();
+            document.getElementById('volunteerPhotoPreview').style.display = 'none';
+        }
+
+        function resetEventForm() {
+            document.getElementById('eventForm').reset();
+            document.getElementById('eventImagePreview').style.display = 'none';
+        }
+
+        function exportData(type) {
+            const data = type === 'volunteers' ? volunteers : events;
+            const dataStr = JSON.stringify(data, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = `laff_${type}_${new Date().toISOString().split('T')[0]}.json`;
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+
+        function clearData(type) {
+            if (confirm(`Are you sure you want to clear all ${type}? This action cannot be undone.`)) {
+                if (type === 'volunteers') {
+                    volunteers = [];
+                    localStorage.setItem('laff_volunteers', JSON.stringify(volunteers));
+                    loadVolunteers();
+                } else {
+                    events = [];
+                    localStorage.setItem('laff_events', JSON.stringify(events));
+                    loadEvents();
+                }
+                loadDashboard();
+            }
+        }
+
+        // Generate data for website integration
+        function generateWebsiteData() {
+            return {
+                volunteers: volunteers,
+                events: events,
+                lastUpdated: new Date().toISOString()
+            };
+        }
+
+        // Auto-save data to a format that can be used by the main website
+        function saveWebsiteData() {
+            const websiteData = generateWebsiteData();
+            localStorage.setItem('laff_website_data', JSON.stringify(websiteData));
+        }
+
+        // Call saveWebsiteData whenever data changes
+        setInterval(saveWebsiteData, 1000);
+    </script>
+</body>
+</html>
